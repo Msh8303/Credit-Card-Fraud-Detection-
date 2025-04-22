@@ -82,20 +82,18 @@ This project investigates fraud detection in highly imbalanced credit card trans
 ### ❌ **Why Model 1 (Unbalanced, No Regularization) Fails**  
 | Aspect               | Model 1 Behavior                | Ideal Behavior                  |  
 |----------------------|----------------------------------|---------------------------------|  
-| **Validation Loss**  | Drops to 0 (overfitting)        | Plateaus at small value (e.g., 0.002) |  
-| **Fraud Recall**     | 0% (ignores minority class)     | >75% recall                     |  
+| **Validation Loss**  | Drops to 0 (overfitting)        | Plateaus at small value (e.g., 0.002) |
 | **Generalization**   | Fails on new fraud patterns     | Adapts to unseen data           |  
 
 #### **Explanation**:  
 1. **No Regularization**: Unconstrained weights memorize noise in training data.  
-2. **Class Imbalance Ignorance**: Optimizes for majority class (non-fraud), achieving 99.9% accuracy but 0% fraud detection.  
-3. **Misleading Metrics**: High accuracy reflects class imbalance, not model efficacy.  
+2. **Class Imbalance Ignorance**: Optimizes for majority class (non-fraud), achieving 99.9% accuracy but 0% fraud detection. 
 
 ---
 
 ## 🏆 Conclusion  
 1. **Best Model**: **XGBoost** trained on **imbalanced data** achieves the highest F1-score (0.85) and precision (0.98), making it suitable for production.  
 2. **Deep Learning Insights**:  
-   - SMOTE-ENN balancing improves recall but reduces precision.  
-   - Regularization (dropout + L2) stabilizes training but requires extensive tuning.  
+   - SMOTE-ENN balancing 
+   - Regularization (dropout + L2) stabilizes training 
 3. **Practical Recommendation**: Prioritize tree-based models (XGBoost) for imbalanced fraud detection tasks due to their robustness and interpretability.  
