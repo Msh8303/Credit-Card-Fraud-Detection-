@@ -8,7 +8,7 @@
 
 ---
 
-# 🏦 Fraud Detection in Credit Card Transactions  
+# [🏦 Fraud Detection in Credit Card Transactions - colab](https://colab.research.google.com/drive/15fk3srLz3C3Cz0ISA4GzSmxdPkJodlxh?usp=sharing)  
 **A Comparative Study of Neural Networks and Traditional Machine Learning Models**
 
 ---
